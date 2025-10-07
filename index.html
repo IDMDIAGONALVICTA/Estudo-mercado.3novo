@@ -52,17 +52,11 @@
       if (targetEl) {
         var bar = doc.createElement('div');
         bar.setAttribute('style', 'margin:8px 0 14px 0; display:flex; gap:8px; flex-wrap:wrap;');
-        var b1 = doc.createElement('button');
-        b1.className = 'btn btn-estudo';
-        b1.textContent = 'Estudo Mercadológico';
-        b1.setAttribute('style','color:#fff !important;');
-        b1.onclick = function() { /* fica na própria aba */ };
         var b2 = doc.createElement('button');
         b2.className = 'btn btn-perfil';
         b2.textContent = 'Perfil de Cliente';
         b2.setAttribute('style','color:#fff !important;');
         b2.onclick = function() { parent.switchToPerfil(); }; // chama o pai
-        bar.appendChild(b1);
         bar.appendChild(b2);
         targetEl.parentNode.insertBefore(bar, targetEl);
       }
@@ -440,9 +434,7 @@ button.btn-estudo, button.btn-perfil, button.btn-concorrentes, button
 </style>
 </head>
 <body>
-<div id="main-tabbar">
-<button class="main-tab" data-target="iEstudo">Estudo Mercadológico</button>
-</div>
+
 <script>
 (function(){
   function show(id){
@@ -5788,8 +5780,6 @@ function updateCharts(){
     try{
       const html = '<!DOCTYPE html>
 
-
-
 ' + document.documentElement.outerHTML;
       const blob = new Blob([html], {type:'text/html;charset=utf-8'});
       const url  = URL.createObjectURL(blob);
@@ -6465,7 +6455,6 @@ r.addEventListener('load', function(){ setTimeout(ensureInternalTab, 150); }); }
   renderAnnulus();
 })();
 </script>
-
 
 <script>
 (function(){
